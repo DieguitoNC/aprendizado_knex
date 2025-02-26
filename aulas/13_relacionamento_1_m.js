@@ -1,4 +1,4 @@
-var database = require("./database.js");
+var database = require("../database.js");
 
 database.select(["games.*", "estudios.nome as estudio_nome"]).table("games").innerJoin("estudios", "estudios.game_id", "games.id").then(data =>{
   var estudiosGamesArray = data
